@@ -1,13 +1,16 @@
+/* Base Tailwind imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Custom styles */
 body {
     font-family: 'Inter', sans-serif;
     background: linear-gradient(to bottom right, rgb(243, 232, 255), rgb(216, 180, 254));
     color: #374151;
 }
 
+/* Project card styles */
 .project-card {
     transition: all 0.3s ease;
 }
@@ -16,7 +19,7 @@ body {
     transform: translateY(-5px);
 }
 
-/* Project card image container */
+/* Project image container */
 .project-image-container {
     position: relative;
     padding: 2rem;
@@ -45,7 +48,7 @@ body {
     filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.15));
 }
 
-/* Custom animation classes */
+/* Animation classes */
 .bounce-in {
     animation: bounceIn 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -76,7 +79,7 @@ body {
     color: transparent;
 }
 
-/* Animate profile image glow */
+/* Pulse animation */
 @keyframes pulse {
     0% {
         opacity: 0.6;
@@ -91,4 +94,238 @@ body {
 
 .animate-pulse {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Utility classes */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .md\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .md\:flex-row {
+        flex-direction: row;
+    }
+    .md\:w-1\/2 {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+/* Layout utilities */
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+.gap-12 {
+    gap: 3rem;
+}
+
+/* Spacing */
+.p-4 {
+    padding: 1rem;
+}
+
+.p-8 {
+    padding: 2rem;
+}
+
+.py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-12 {
+    margin-bottom: 3rem;
+}
+
+.mt-12 {
+    margin-top: 3rem;
+}
+
+.mt-20 {
+    margin-top: 5rem;
+}
+
+/* Colors and backgrounds */
+.bg-white {
+    background-color: rgb(255, 255, 255);
+}
+
+.bg-white\/90 {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.text-gray-600 {
+    color: rgb(75, 85, 99);
+}
+
+.text-gray-800 {
+    color: rgb(31, 41, 55);
+}
+
+.text-purple-600 {
+    color: rgb(147, 51, 234);
+}
+
+.text-white {
+    color: rgb(255, 255, 255);
+}
+
+/* Typography */
+.text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+/* Effects */
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.hover\:shadow-2xl:hover {
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+/* Transitions */
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+/* Misc */
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.rounded-xl {
+    border-radius: 0.75rem;
+}
+
+.border {
+    border-width: 1px;
+}
+
+.border-gray-100 {
+    border-color: rgb(243, 244, 246);
+}
+
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.w-32 {
+    width: 8rem;
+}
+
+.h-32 {
+    height: 8rem;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.cursor-not-allowed {
+    cursor: not-allowed;
+}
+
+.opacity-75 {
+    opacity: 0.75;
 }
