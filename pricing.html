@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Michael Keshishian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-purple-50 to-purple-200">
+    <!-- Navbar -->
+    <nav class="bg-white/70 backdrop-blur-md shadow-md fixed top-0 left-0 right-0 z-40">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="text-xl font-bold text-purple-600 hover:text-purple-800">Michael Keshishian</a>
+                <a href="index.html" class="px-4 py-2 text-purple-600 hover:text-purple-800 hover:bg-purple-100 rounded-md transition-all">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="min-h-screen pt-16"> <!-- pt-16 to offset fixed navbar -->
+        <!-- Pricing Section -->
+        <div id="pricing" class="py-20 bg-gradient-to-b from-purple-200 to-purple-300">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center" data-aos="fade-up">Pricing</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 1: 1-3 Page Website -->
+                    <div class="pricing-card bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all border border-gray-100" data-aos="fade-up">
+                        <h3 class="text-2xl font-bold text-purple-600 mb-4">Basic Website</h3>
+                        <p class="text-gray-600 mb-2">1-3 Pages</p>
+                        <p class="text-5xl font-bold text-gray-800 mb-6">$600</p>
+                        <ul class="text-gray-600 mb-8 space-y-2">
+                            <li>Responsive Design</li>
+                            <li>Basic SEO Setup</li>
+                            <li>Contact Form</li>
+                        </ul>
+                        <button class="mt-auto px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-all w-full open-modal-button" data-plan="Basic Website (1-3 Pages)">Get Started</button>
+                    </div>
+
+                    <!-- Card 2: 4-7 Page Website -->
+                    <div class="pricing-card bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-2xl font-bold text-purple-600 mb-4">Standard Website</h3>
+                        <p class="text-gray-600 mb-2">4-7 Pages</p>
+                        <p class="text-5xl font-bold text-gray-800 mb-6">$1000</p>
+                        <ul class="text-gray-600 mb-8 space-y-2">
+                            <li>Everything in Basic</li>
+                            <li>CMS Integration (Optional)</li>
+                            <li>Enhanced SEO</li>
+                        </ul>
+                        <button class="mt-auto px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-all w-full open-modal-button" data-plan="Standard Website (4-7 Pages)">Get Started</button>
+                    </div>
+
+                    <!-- Card 3: 8+ Page Website -->
+                    <div class="pricing-card bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-2xl font-bold text-purple-600 mb-4">Premium Website</h3>
+                        <p class="text-gray-600 mb-2">8+ Pages</p>
+                        <p class="text-3xl font-bold text-gray-800 mb-6">Custom Quote</p>
+                        <ul class="text-gray-600 mb-8 space-y-2">
+                            <li>Everything in Standard</li>
+                            <li>Advanced Features</li>
+                            <li>Dedicated Support</li>
+                        </ul>
+                        <button class="mt-auto px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-all w-full open-modal-button" data-plan="Premium Website (8+ Pages)">Get Started</button>
+                    </div>
+
+                    <!-- Card 4: Automation / Bots / Tech Projects -->
+                    <div class="pricing-card bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="text-2xl font-bold text-purple-600 mb-4">Custom Tech Solutions</h3>
+                        <p class="text-gray-600 mb-2">Automation, Bots, etc.</p>
+                        <p class="text-3xl font-bold text-gray-800 mb-6">Custom Quote</p>
+                        <ul class="text-gray-600 mb-8 space-y-2">
+                            <li>Tailored to Your Needs</li>
+                            <li>Process Automation</li>
+                            <li>Innovative Solutions</li>
+                        </ul>
+                        <button class="mt-auto px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-all w-full open-modal-button" data-plan="Custom Tech Solutions">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center p-4 hidden z-50">
+        <div class="bg-white rounded-lg shadow-xl p-8 max-w-md w-full transform transition-all opacity-0 scale-95" id="modal-content">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-800">Get Started</h3>
+                <button id="closeModalButton" class="text-gray-500 hover:text-gray-700 text-3xl">&times;</button>
+            </div>
+            <form action="https://formspree.io/f/xpwdkjay" method="POST">
+                <input type="hidden" name="_next" value="pricing.html?form_submitted=true">
+                <input type="hidden" name="_subject" value="New Inquiry from Pricing Page!">
+                <input type="hidden" id="planInput" name="Selected Plan" value="">
+                
+                <div class="mb-4">
+                    <label for="modal_name" class="block text-gray-700 text-sm font-bold mb-2">Full Name:</label>
+                    <input type="text" id="modal_name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-4">
+                    <label for="modal_email" class="block text-gray-700 text-sm font-bold mb-2">Email Address:</label>
+                    <input type="email" id="modal_email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-4">
+                    <label for="modal_phone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number: (Optional)</label>
+                    <input type="tel" id="modal_phone" name="phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-6">
+                    <label for="modal_comments" class="block text-gray-700 text-sm font-bold mb-2">Comments / Project Details:</label>
+                    <textarea id="modal_comments" name="comments" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+                <div class="text-right">
+                    <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-lg focus:outline-none focus:shadow-outline transition-all">
+                        Send Inquiry
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html> 
